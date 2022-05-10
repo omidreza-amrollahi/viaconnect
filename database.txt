@@ -1,0 +1,4 @@
+Email,Travel time,Comments
+
+Person1@gmail.com,from vienna to berlin at 6 may,max parcel 1 kg
+Person2@gmail.com,from vienna to dubai 8 may,max 2 kg
