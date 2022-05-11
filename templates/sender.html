@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
   <link href="./static/assets/favicon.ico" rel="icon">
 
-  <title>Title page</title>  
+  <title>ViaConnect</title>  
 
 <link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
 
@@ -24,7 +24,7 @@
 <div id="site-border-right"></div>
 <div id="site-border-top"></div>
 <div id="site-border-bottom"></div>
-<!-- Add your content of header -->
+ <!-- Add your content of header -->
 <header>
   <nav class="navbar  navbar-fixed-top navbar-default">
     <div class="container">
@@ -37,75 +37,70 @@
 
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./works.html" title="">02 : Works</a></li>
-          <li><a href="./about.html" title="">03 : About me</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>
-          <li><a href="./components.html" title="">05 : Components</a></li>
+          <li><a href="./index.html" title="">01 : Carriers</a></li>
+          <li><a href="./sender.html" title="">02 : Senders</a></li>
         </ul>
-
-
-          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
-            <li><a href="./index.html" title="" class="active">001</a></li>
-            <li><a href="./index.html" title="">002</a></li>
-            <li><a href="./index.html" title="">003</a></li>
-            <li><a href="./index.html" title="">004</a></li>
-            <li><a href="./index.html" title="">005</a></li>
-            <li><a href="./index.html" title="">006</a></li>
-          </ul>
 
 
       </div> 
     </div>
   </nav>
 </header>
+
+
+
 <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2">02 : Senders (this is not working yet)</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Add your site or app content here -->
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <img src="./static/assets/images/work001-01.jpg" class="img-responsive" alt="">
-        <div class="card-container">
-          <div class="text-center">
-            <h1 class="h2">001 : Fringilla sit amet</h1>
-          </div>
-          <p>Nulla facilisi. Vivamus vestibulum, elit in scelerisque ultricies, nisl nunc pulvinar ligula, id sodales arcu sapien in nisi. Quisque libero enim, mattis non augue posuere, venenatis dapibus urna.</p>
-
-          <blockquote>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</p>
-            <small class="pull-right">Irina Martin</small>
-          </blockquote>
+      <div class="col-xs-12 col-md-6">
+        <div class="template-example">
+          <h2 class="template-title-example">List of available flights</h2>
+           {% for table in tables %}
+          <h2>{{titles[loop.index]}}</h2>                            
+          {{ table|safe }}
+          {% endfor %}
         </div>
       </div>
 
-      
-      
-      <div class="col-md-8 col-md-offset-2 section-container-spacer">
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <img src="./static/assets/images/work001-02.jpg" class="img-responsive" alt="">
-            <p>Menphis skyline</p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <img src="./static/assets/images/work001-03.jpg" class="img-responsive" alt="">
-            <p>Menphis skyline</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-xs-12">
-        <img src="./static/assets/images/work001-04.jpg" class="img-responsive" alt="">
+      <div class="col-xs-12 col-md-6">
+       <form action="submit_form" method="post" class="reveal-content">
+          <div class="template-example">
+            <h2 class="template-title-example">Inputs</h2>
+            <div class="row">
+                <div class="form-group">
+                  <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input name="subject" type="text" class="form-control" id="subject" placeholder="Traveling from A to B at time X">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" class="form-control" rows="5" placeholder="Comments"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default btn-lg">Add to the list</button>
+            </div>
+          </div>
+        </form>
       </div>
-
     </div>
   </div>
 </div>
-
 
 <footer class="footer-container text-center">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+        <p>© VIACONNECT | Website created by Omid</p>
       </div>
     </div>
   </div>
